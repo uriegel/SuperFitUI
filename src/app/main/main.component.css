@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.button {
+    outline: none;
+    border-style: none;
+    border-width: 0px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 20px;
+    background: var(--button-background);
+    color: var(--button-color);
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.button:disabled {
+    background: var(--button-disabled-background);
+    color: gray;
+}
+
+.filler {
+    flex-grow: 1;
+}
