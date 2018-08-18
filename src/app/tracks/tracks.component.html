@@ -1,1 +1,14 @@
-<div *ngFor="let track of tracks">{{track.time}}</div>
+<mk-scroller>
+    <div class="container">
+        <div class="track" *ngFor="let track of tracks">
+            <app-track class="icon"></app-track>
+            <div>
+                <div class="title">{{track | trackTitle}}</div>
+                <div>
+                    <span>{{track.distance.toFixed(0)}} km</span>
+                    <span>{{track.averageSpeed.toFixed(1)}} km/h</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</mk-scroller>

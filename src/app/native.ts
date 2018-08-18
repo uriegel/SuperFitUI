@@ -28,6 +28,6 @@ export declare class TrackData
     name: string
     distance: number
     averageSpeed: number
-    time: Date
+    time: number
 }
 

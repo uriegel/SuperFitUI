@@ -34,7 +34,8 @@
                         ],
                         "scripts": 
                         [
-                            "src/native.js"
+                            "src/native.js",
+                            "src/iscroll.js"
                         ]
                     },
                     "configurations": 
