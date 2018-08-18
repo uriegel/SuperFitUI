@@ -20,8 +20,22 @@ export class TracksComponent implements OnInit {
 
     onTracks(tracks: TrackData[]) 
     {
-        console.log("tracks", tracks)
         this.zone.run(() => this.tracks = tracks)
+    }
+
+    doHapticFeedback()
+    {
+        Native.doHapticFeedback()
+    }
+
+    showTrack(track: TrackData)
+    {
+        Native.onTrackSelected(track.trackNr)
+    }
+
+    deleteTrack(trackNr: Number) 
+    {
+        this.zone.run(() => this.tracks = this.tracks.filter(n => n.trackNr != trackNr))
     }
 }
 

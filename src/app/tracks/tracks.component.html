@@ -1,6 +1,7 @@
 <mk-scroller>
     <div class="container">
-        <div class="track" *ngFor="let track of tracks">
+        <div class="track" *ngFor="let track of tracks" mkClickAnimation [animatedColor]="'#e0e0ff'" 
+            (onClickStart)="doHapticFeedback()" (onClickEnd)="showTrack(track)">
             <app-track class="icon"></app-track>
             <div>
                 <div class="title">{{track | trackTitle}}</div>
