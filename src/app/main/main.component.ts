@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, NgZone } from '@angular/core'
 import { MainState } from '../enums/main-state'
 import { INative, ServiceState } from '../native'
 
@@ -12,7 +12,7 @@ export class MainComponent implements OnInit
 {
     state = MainState.Stopped
 
-    constructor() { }
+    constructor(private zone: NgZone) { }
 
     ngOnInit() 
     { 
@@ -20,19 +20,23 @@ export class MainComponent implements OnInit
         Native.getState()
     }
 
-    onStateChanged(state: ServiceState) {
-        switch (state)
+    onStateChanged(state: ServiceState) 
+    {
+        this.zone.run(() => 
         {
-            case ServiceState.Started:
-                this.state = MainState.Started
-                break
-            case ServiceState.Stopped:
-                this.state = MainState.Stopped
-                break
-            default:
-                this.state = MainState.Transition
-                break
-        }
+            switch (state)
+            {
+                case ServiceState.Started:
+                    this.state = MainState.Started
+                    break
+                case ServiceState.Stopped:
+                    this.state = MainState.Stopped
+                    break
+                default:
+                    this.state = MainState.Transition
+                    break
+            }
+        })
     }
 
     doHapticFeedback() 
