@@ -1,0 +1,11 @@
+:host
+{
+    display: flex;
+}
+
+app-menu
+{
+    opacity: 0.8;
+    background-color: white;
+    padding: 10px;
+}

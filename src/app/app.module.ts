@@ -6,7 +6,9 @@ import { MainComponent } from './main/main.component'
 import { UmobilekitModule } from 'umobilekit';
 import { TracksComponent } from './tracks/tracks.component';
 import { TrackComponent } from './svgs/track/track.component';
-import { TrackTitlePipe } from './pipes/track-title.pipe'
+import { TrackTitlePipe } from './pipes/track-title.pipe';
+import { TrackingControlComponent } from './tracking-control/tracking-control.component';
+import { MenuComponent } from './svgs/menu/menu.component'
 
 @NgModule({
     declarations: 
@@ -15,7 +17,9 @@ import { TrackTitlePipe } from './pipes/track-title.pipe'
         MainComponent,
         TracksComponent,
         TrackComponent,
-        TrackTitlePipe
+        TrackTitlePipe,
+        TrackingControlComponent,
+        MenuComponent
     ],
     imports: 
     [

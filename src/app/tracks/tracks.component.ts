@@ -1,7 +1,8 @@
 import { Component, OnInit, NgZone } from '@angular/core'
 import { INative, TrackData } from '../native'
 
-@Component({
+@Component
+({
     selector: 'app-tracks',
     templateUrl: './tracks.component.html',
     styleUrls: ['./tracks.component.css']
