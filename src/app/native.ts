@@ -14,6 +14,11 @@ export interface INative
     onMapSelected(map: string): void
 }
 
+export interface INativeTrackingControls
+{
+    toggleMode()
+}
+
 export enum ServiceState 
 {
     Stopped = "Stopped",
