@@ -8,7 +8,9 @@ import { TracksComponent } from './tracks/tracks.component';
 import { TrackComponent } from './svgs/track/track.component';
 import { TrackTitlePipe } from './pipes/track-title.pipe';
 import { TrackingControlComponent } from './tracking-control/tracking-control.component';
-import { MenuComponent } from './svgs/menu/menu.component'
+import { MenuComponent } from './svgs/menu/menu.component';
+import { DisplayComponent } from './display/display.component';
+import { NotNullPipe } from './pipes/not-null.pipe'
 
 @NgModule({
     declarations: 
@@ -19,7 +21,9 @@ import { MenuComponent } from './svgs/menu/menu.component'
         TrackComponent,
         TrackTitlePipe,
         TrackingControlComponent,
-        MenuComponent
+        MenuComponent,
+        DisplayComponent,
+        NotNullPipe
     ],
     imports: 
     [

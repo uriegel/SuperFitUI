@@ -13,29 +13,20 @@ export class TracksComponent implements OnInit {
 
     constructor(private zone: NgZone) { }
 
-    ngOnInit() 
-    {
+    ngOnInit() {
         tracksApp = this
         Native.fillTracks()
     }
 
-    onTracks(tracks: TrackData[]) 
-    {
+    onTracks(tracks: TrackData[]) {
         this.zone.run(() => this.tracks = tracks)
     }
 
-    doHapticFeedback()
-    {
-        Native.doHapticFeedback()
-    }
+    doHapticFeedback() { Native.doHapticFeedback() }
 
-    showTrack(track: TrackData)
-    {
-        Native.onTrackSelected(track.trackNr)
-    }
+    showTrack(track: TrackData) { Native.onTrackSelected(track.trackNr) }
 
-    deleteTrack(trackNr: Number) 
-    {
+    deleteTrack(trackNr: Number) {
         this.zone.run(() => this.tracks = this.tracks.filter(n => n.trackNr != trackNr))
     }
 }

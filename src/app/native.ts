@@ -1,6 +1,5 @@
 
-export interface INative 
-{
+export interface INative {
     getState(): string
     doHapticFeedback(): void
     finish(): void
@@ -14,21 +13,18 @@ export interface INative
     onMapSelected(map: string): void
 }
 
-export interface INativeTrackingControls
-{
+export interface INativeTrackingControls {
     toggleMode()
 }
 
-export enum ServiceState 
-{
+export enum ServiceState {
     Stopped = "Stopped",
     Starting = "Starting",
     Started = "Started",
     Stopping = "Stopping"
 }
 
-export declare class TrackData 
-{
+export declare class TrackData {
     trackNr: number
     name: string
     distance: number

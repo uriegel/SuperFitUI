@@ -2,30 +2,24 @@ import { Component, OnInit, NgZone } from '@angular/core'
 import { MainState } from '../enums/main-state'
 import { INative, ServiceState } from '../native'
 
-@Component(
-{
+@Component({
     selector: 'app-main',
     templateUrl: './main.component.html',
     styleUrls: ['./main.component.css']
 })
-export class MainComponent implements OnInit 
-{
+export class MainComponent implements OnInit {
     state = MainState.Stopped
 
     constructor(private zone: NgZone) { }
 
-    ngOnInit() 
-    { 
+    ngOnInit() { 
         mainApp = this
         Native.getState()
     }
 
-    onStateChanged(state: ServiceState) 
-    {
-        this.zone.run(() => 
-        {
-            switch (state)
-            {
+    onStateChanged(state: ServiceState) {
+        this.zone.run(() => {
+            switch (state) {
                 case ServiceState.Started:
                     this.state = MainState.Started
                     break
@@ -39,28 +33,23 @@ export class MainComponent implements OnInit
         })
     }
 
-    doHapticFeedback() 
-    {
+    doHapticFeedback() {
         Native.doHapticFeedback()
     }
 
-    start()
-    {
+    start() {
         Native.start()
     }
 
-    display()
-    {
+    display() {
         Native.display()
     }
 
-    reset()
-    {
+    reset() {
         Native.reset()
     }
 
-    stop()
-    {
+    stop() {
         Native.stop()
     }
 }

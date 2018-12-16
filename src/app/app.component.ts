@@ -10,8 +10,7 @@ export class AppComponent  implements OnInit
 {
     hash = ""
     
-    ngOnInit() 
-    {
+    ngOnInit() {
         this.hash = location.hash
 
         onhashchange = () => this.hash = location.hash
