@@ -12,9 +12,10 @@ export class DisplayComponent implements OnInit {
 
     ngOnInit() {}
 
-    setGpsActive() {}
-
+    gpsActive = false
     heartRate : number
+
+    setGpsActive() { this.zone.run(() => this.gpsActive = true) }
 
     onHeartRateChanged(heartRate: number) {
         this.zone.run(() => this.heartRate = heartRate)

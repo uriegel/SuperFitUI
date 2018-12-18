@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core'
 export class NotNullPipe implements PipeTransform {
 
     transform(value?: number): string {
-        return value ? value.toString() : "-"
+        return value != undefined ? value.toString() : "-"
     }
 
 }

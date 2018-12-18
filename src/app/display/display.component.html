@@ -58,7 +58,7 @@
             </div>
         </div>
     </div>
-    <!-- <div class="gps-overlay">
-        <img src="images/gps.svg" class="gps hidden">
-    </div> -->
 </mk-scroller>  
+<div class="gps-overlay" *ngIf="gpsActive">
+    <img src="images/gps.svg">
+</div>
