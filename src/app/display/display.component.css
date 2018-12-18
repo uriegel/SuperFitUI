@@ -1,7 +1,27 @@
-body {
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     background: var(--display-body);
 }
 
+mk-scroller {
+    flex-grow: 1;
+}
+
+.display {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    background: var(--display-background);
+    color: var(--display-color);
+}
+
+.container {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
 .label {
     margin-left: 10px;
     margin-top: 10px;
@@ -25,11 +45,6 @@ body {
 .contentSmall {
     font-size: 100px;
     font-weight: 400;
-}
-
-.display {
-    background: var(--display-background);
-    color: var(--display-color);
 }
 
 .gps-overlay {

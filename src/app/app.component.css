@@ -1,0 +1,12 @@
+:host {
+    --display-body: #333333;
+    --display-background: black;
+    --display-color: white;
+
+    --button-background: lightblue;
+    --button-disabled-background: lightgray;
+    --button-color: black;
+    --button-clicked: #e0e0ff;
+
+    --dialog-background: white;
+}
