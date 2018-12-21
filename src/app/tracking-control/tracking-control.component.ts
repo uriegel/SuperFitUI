@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 import { INativeTrackingControls } from '../native'
 
 @Component({
@@ -6,14 +6,8 @@ import { INativeTrackingControls } from '../native'
   templateUrl: './tracking-control.component.html',
   styleUrls: ['./tracking-control.component.css']
 })
-export class TrackingControlComponent implements OnInit 
-{
-    constructor() { }
-
-    ngOnInit() { }
-
-    onToggle()
-    {
+export class TrackingControlComponent {
+    onToggle() {
         NativeTrackingControls.toggleMode()
     }
 }

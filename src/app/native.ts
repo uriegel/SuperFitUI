@@ -14,7 +14,13 @@ export interface INative {
 }
 
 export interface INativeTrackingControls {
-    toggleMode()
+    toggleMode(): any
+}
+
+export interface IMapViewControls {
+    doHapticFeedback(): any
+    saveTrack(): any
+    deleteTrack(): any
 }
 
 export enum ServiceState {

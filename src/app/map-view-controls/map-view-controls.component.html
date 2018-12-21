@@ -1,0 +1,14 @@
+<div >
+    <img id="switcher" (click)="toggleControls()" src="images/listBlack.png">
+</div>
+<div class="dialog" [class.hidden]="isHidden">
+    <button id="delete" (click)="onDelete()">
+        <img src="images/delete.svg">
+    </button>
+    <button id="load" >
+        <img src="images/track.svg">
+    </button>
+    <button id="save" (click)="onSave()">
+        <img src="images/content-save.svg">
+    </button>
+</div>

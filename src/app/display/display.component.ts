@@ -1,16 +1,14 @@
-import { Component, OnInit, NgZone } from '@angular/core'
+import { Component, NgZone } from '@angular/core'
 
 @Component({
     selector: 'app-display',
     templateUrl: './display.component.html',
     styleUrls: ['./display.component.css']
 })
-export class DisplayComponent implements OnInit {
+export class DisplayComponent {
     constructor(private zone: NgZone) {
         displayApp = this
     }
-
-    ngOnInit() {}
 
     gpsActive = false
     heartRate : number

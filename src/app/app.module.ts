@@ -11,7 +11,8 @@ import { TrackingControlComponent } from './tracking-control/tracking-control.co
 import { MenuComponent } from './svgs/menu/menu.component'
 import { DisplayComponent } from './display/display.component'
 import { DisplayNumberPipe } from './pipes/display-number.pipe'
-import { ToTimePipe } from './pipes/to-time.pipe'
+import { ToTimePipe } from './pipes/to-time.pipe';
+import { MapViewControlsComponent } from './map-view-controls/map-view-controls.component'
 
 @NgModule({
     declarations: 
@@ -25,7 +26,8 @@ import { ToTimePipe } from './pipes/to-time.pipe'
         MenuComponent,
         DisplayComponent,
         DisplayNumberPipe,
-        ToTimePipe
+        ToTimePipe,
+        MapViewControlsComponent
     ],
     imports: 
     [
